@@ -25,7 +25,7 @@ Sebuah API CRUD Sederhana & Auth MultiUser Admin & User. API ini digunakan untuk
 
 ## Docs Postman
 
-[Link](https://www.getpostman.com/collections/3fe89402af5abd6d64c2)
+[Link Docs Postman](https://www.getpostman.com/collections/3fe89402af5abd6d64c2)
 
 ## Credential
 
@@ -42,7 +42,7 @@ User yang tersedia :
 | register       |     *     |     *     |
 | refreshtoken   |     *     |     *     |
 | getStudent     |     *     |     *     |
-| getStudentById |     *     |     *     |
+| getByAbsent    |     *     |     *     |
 | postStudent    |     *     |           |
 | updateStudent  |     *     |           |
 | deleteStudent  |     *     |           |

@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: miniabsensi
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: miniabsensi
+  template:
+    metadata:
+      labels:
+        app: miniabsensi
+    spec:
+      containers:
+        - name: miniabsensi
+          image: alisaid07/miniabsensi:1.0.0
+          ports:
+            - containerPort: 3000
+          env:
+            - name: DB_URL
+              value: mongodb://mongo:27017/dev
+            - name: PORT
+              value: "3000"
+            - name: privateKey
+              value: 123#22
+          imagePullPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: miniabsensi
+spec:
+  selector:
+    app: miniabsensi
+  ports:
+    - port: 80
+      targetPort: 3000
+  type: LoadBalancer
